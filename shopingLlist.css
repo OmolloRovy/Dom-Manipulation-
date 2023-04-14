@@ -1,0 +1,49 @@
+Body {
+    Font-family: arial;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+Header {
+    Background-color: #5de0f7;
+    Color: rgb(9, 43, 10, 63, 34, 34);
+    Text-align: center;
+    Padding: 10px;
+}
+
+Section {
+    Margin: 10px;
+}
+
+Input[type=”text”] {
+    Padding: 20px;
+    Border-radius: 5px;
+    Border: none;
+    Margin-right: 20px;
+}
+
+Button {
+    Background-color: #00be0a;
+    Color: white;
+    Padding: 5px;
+    Border: none;
+    Border-radius: 5px;
+    Cursor: pointer;
+    margin-left: 20px;
+    width: 50px;
+}
+
+Li {
+    List-style-type: none;
+    Margin-bottom: 20px;
+}
+
+Li button {
+    Background-color: #dd372b;
+    Color: rgba(255, 255, 255, 0.993);
+    Padding: 5px;
+    Border: none;
+    Border-radius: 5px;
+    Cursor: pointer;
+    Margin-left: 20px;
+}
