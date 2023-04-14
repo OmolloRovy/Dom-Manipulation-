@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        Body {
+            Font-family: arial;
+            text-align: center;
+            background-color: aquamarine;
+        }
+        
+        Header {
+            Background-color: #5de0f7;
+            Color: rgb(9, 43, 10, 63, 34, 34);
+            Text-align: center;
+            Padding: 10px;
+        }
+        
+        Section {
+            Margin: 10px;
+        }
+        
+        Input[type=”text”] {
+            Padding: 20px;
+            Border-radius: 5px;
+            Border: none;
+            Margin-right: 20px;
+        }
+        
+        Button {
+            Background-color: #00be0a;
+            Color: white;
+            Padding: 5px;
+            Border: none;
+            Border-radius: 5px;
+            Cursor: pointer;
+            margin-left: 20px;
+            width: 50px;
+        }
+        
+        Li {
+            List-style-type: none;
+            Margin-bottom: 20px;
+        }
+        
+        Li button {
+            Background-color: #dd372b;
+            Color: rgba(255, 255, 255, 0.993);
+            Padding: 5px;
+            Border: none;
+            Border-radius: 5px;
+            Cursor: pointer;
+            Margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Morning Routine</h1>
+    </header>
+    <section>
+        <h2>Activities:</h2>
+        <ul id="item-list"></ul>
+
+        <label for="new-item">Add new activity:</label>
+        <input type="text" id="new-item">
+        <button id="add-button">Add</button>
+    </section>
+
+    <script>
+        const itemList = document.getElementById("item-list");
+        const addButton = document.getElementById("add-button");
+        const newItem = document.getElementById("new-item");
+
+        addButton.addEventListener("click", function() {
+            if (newItem.value !== "") {
+                const li = document.createElement("li");
+                const deleteButton = document.createElement("button");
+                deleteButton.innerText = "Delete";
+                deleteButton.addEventListener("click", function() {
+                    li.remove();
+                });
+                li.innerText = newItem.value;
+                li.appendChild(deleteButton);
+                itemList.appendChild(li);
+                newItem.value = "";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
