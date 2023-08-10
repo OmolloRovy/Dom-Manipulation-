@@ -9,7 +9,7 @@ addButton.addEventListener("click", function() {
         deleteButton.innerText = "Delete";
         deleteButton.addEventListener("click", function() {
             li.remove();
-        });
+        });   
         li.innerText = newItem.value;
         li.appendChild(deleteButton);
         itemList.appendChild(li);
