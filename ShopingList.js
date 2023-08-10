@@ -1,4 +1,4 @@
-const itemList = document.getElementById("item-list");
+  const itemList = document.getElementById("item-list");
 const addButton = document.getElementById("add-button");
 const newItem = document.getElementById("new-item");
 
