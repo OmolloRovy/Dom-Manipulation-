@@ -2,7 +2,7 @@
 const addButton = document.getElementById("add-button");
 const newItem = document.getElementById("new-item");
 
-addButton.addEventListener("click", function(newItem.value !== "") {
+addButton.addEventListener("click", function(newItem.valu) {
     if (newItem.value !== "") {
         const li = document.createElement("li");
         const deleteButton = document.createElement("button");
