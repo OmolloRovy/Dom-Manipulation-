@@ -6,7 +6,6 @@ addButton.addEventListener("click", function() {
         });   
         li.innerText = newItem.value;
         li.appendChild(deleteButton);
-        itemList.appendChild(li);
-        newItem.value = "";
+       
     }
 });
