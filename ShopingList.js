@@ -1,6 +1,4 @@
-  const itemList = document.getElementById("item-list");
-const addButton = document.getElementById("add-button");
-const newItem = document.getElementById("new-item");
+
 
 addButton.addEventListener("click", function() {
     if (newItem.value !== "") {
