@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>Shopping List</title>
+    <style>
+        #list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        #list button {
+            margin-left: 10px;
+            cursor: pointer;
+            background-color: #f44336; /* Red */
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        #list button:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shopping List</h1>
+    <section>
+        <ul id="list">
+            <li>Bread <button class="remove-button">x</button></li>
+            <li>Milk <button class="remove-button">x</button></li>
+            <li>Eggs <button class="remove-button">x</button></li>
+        </ul>
+        <input type="text" id="itemInput">
+        <button id="addItemButton">Add Item</button>
+    </section>
+
+    <script>
+        const list = document.getElementById("list");
+        const itemInput = document.getElementById("itemInput");
+        const addItemButton = document.getElementById("addItemButton");
+
+        // Event delegation for removing items
+        list.addEventListener("click", (event) => {
+            if (event.target.classList.contains("remove-button")) {
+                event.target.parentNode.remove();
+            }
+        });
+
+        addItemButton.addEventListener("click", () => {
+            const newItemText = itemInput.value.trim();
+            if (newItemText !== "") {
+                const listItem = document.createElement("li");
+                listItem.textContent = newItemText;
+
+                const removeButton = document.createElement("button");
+                removeButton.textContent = "x";
+                removeButton.classList.add("remove-button");
+                listItem.appendChild(removeButton);
+
+                list.appendChild(listItem);
+                itemInput.value = "";
+            }
+        });
+
+
+          itemInput.addEventListener("keydown", (event) => {
+              if (event.key === "Enter") {
+                  addItemButton.click();
+              }
+          });
+    </script>
+</body>
+
+</html>
