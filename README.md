@@ -1,4 +1,3 @@
-
 # Shopping list Application 
 
 This is a simple web application that allows users to create and manage a shopping list.  Users can add items to the list and remove them when they're done.
